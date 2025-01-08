@@ -1,15 +1,23 @@
 export default {
   index: 'Introduction',
-  another: 'Another Page',
-  advanced: 'Advanced (A Folder)',
+  another: 'A couple of crumbs.',
+  global: 'Global Markets - World of Cryptocurrencies',
+  consensys: 'Consensus - The Future of Pow/Pos',
+  rules: 'Rules - the cornerstone of each public chain',
+  pmf: 'Market Fit - Progressive Decentralization',
+  protocol: 'Protocol era -  Portfolio Possibilities',
+  creator: 'Creator Economy - Everyone is a DAO',
+  etfs: 'Golden Age - Crypto Index Funds',
+  satoshivision: 'Satoshi Nakamoto Vision - Post-Protocol and Crypto Era',
   about: {
     title: 'About',
     type: 'page'
   },
+
   contact: {
-    title: 'Contact ↗',
+    title: 'Telegram Group ↗',
     type: 'page',
-    href: 'https://twitter.com/shuding_',
+    href: '@CryptoMasterETFs',
     newWindow: true
   }
 };

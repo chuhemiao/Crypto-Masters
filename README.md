@@ -1,16 +1,10 @@
-# Nextra v3 Docs Template
+# Crypto Masters Book
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+My cryptocurrency thoughts and notes.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+[**Online Read →**](https://book.kkdemian.com)
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
-
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+[![crypto master ](/public/og.png)](https://book.kkdemian.com)
 
 ## Local Development
 
