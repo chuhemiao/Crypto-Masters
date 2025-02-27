@@ -16,6 +16,15 @@ const config: DocsThemeConfig = {
       </svg>
     )
   },
+  themeSwitch: {
+    useOptions() {
+      return {
+        light: 'Light',
+        dark: 'Dark',
+        system: 'System'
+      };
+    }
+  },
   // banner: {
   //   key: 'bitcoin etf',
   //   content: (
