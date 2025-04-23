@@ -1,0 +1,237 @@
+# Encryption Algorithms
+
+## 3.1 What is an encryption algorithm?
+
+DEFINITION: An encryption algorithm is a mathematical rule that **turns plaintext information into ciphertext**, or reduces ciphertext to plaintext. Its core goal is that **the content of data cannot be deciphered without a key**.
+
+### 3.1.1 Encryption algorithms are divided into two main categories
+
+Symmetric Encryption (Symmetric Encryption)
+
+- The sender and receiver use the same key.
+
+- It is fast and suitable for encrypting large amount of data.
+
+- Representatives: AES, DES, ChaCha20.
+
+Asymmetric Encryption
+
+- Uses a pair of keys: **public key encryption, private key decryption**.
+
+- Core in the modern Internet, blockchain signature, identity authentication.
+
+- Representative: RSA, ECC (Elliptic Curve Cryptography)
+
+### 3.1.2 Application in blockchain
+
+- **Hash algorithm** (e.g. SHA-256): used to generate fingerprints for blockchain, irreversible, collision resistant.
+
+- **Signature algorithms** (e.g. ECDSA): used to verify whether a transaction is legitimate.
+
+- **Advanced algorithms such as zero-knowledge proof** and homomorphic encryption: used to protect privacy and improve efficiency.
+
+---
+
+## 3.2 Quantum Computers and the Future of Encryption
+
+3.2.1 What is quantum computing?
+
+The smallest unit of a conventional computer is the **Bit**, which can only be either 0 or 1. The basic unit of quantum computing is the **Quantum Bit**, which can be in a superposition state of 0 and 1 at the same time.
+
+This means that quantum computers are far more capable of solving certain math problems than conventional computers.
+
+Impact on encryption:
+
+The central threat to quantum computers stems from two algorithms:
+
+Shor's algorithm.
+
+- Factorizes large integers and computes elliptic curve discrete logarithms in polynomial time.
+
+- It directly breaks RSA and ECC, the foundations of most current asymmetric encryption.
+
+Grover's algorithm
+
+- Reduces the exhaustion time from 2ⁿ to 2ⁿ⁄² for hash functions.
+
+- It poses a challenge to hash algorithms such as SHA-256, but not enough to be an immediate threat.
+
+## 3.3 Will SHA-256 and Elliptic Curves Really Be Cracked?
+
+3.3.1 SHA-256 Security Analysis:
+
+- SHA-256 is an irreversible hash function widely used in Bitcoin and blockchain.
+
+- The Grover algorithm reduces the difficulty of cracking it from 2²⁵⁶ to 2¹²⁸, but it is still very secure.
+
+- Stronger hashing algorithms such as SHA-3, BLAKE3 have emerged to deal with future threats.
+
+CONCLUSION: SHA-256 is still usable in the quantum era, but alternatives with higher cryptographic strength may be needed.
+
+---
+
+Can ECC (Elliptic Curve Cryptography) be broken?
+
+- ECC (such as secp256k1 used by Bitcoin) is based on the elliptic curve discrete logarithm problem.
+
+- Conventional computers require astronomical levels of computational resources to break it.
+
+- But once stable quantum machines with thousands of quantum bits become available, **Shor algorithm can be easily cracked**.
+
+Conclusion: ECC is a “disaster area” for quantum computing, and needs to be replaced by “post-quantum cryptography” in the future.
+
+---In the future, it needs to be replaced by “post-quantum cryptography”.
+
+## 3.4 Post-Quantum Cryptography
+
+To meet the quantum threat, NIST (National Institute of Standards and Technology) has launched the Post-Quantum Encryption Standards Program, and has initially selected four algorithms to enter the standards development phase in 2022:
+
+| Type                 | Representative Algorithms | Features                     |
+| -------------------- | ------------------------- | ---------------------------- |
+| Key Exchange         | Kyber                     | Fast and highly secure       |
+| Signature Scheme     | Dilithium, Falcon         | ECC alternative              |
+| Hash-based Signature | SPHINCS+                  | Hash-based, extremely secure |
+
+These algorithms will be the cornerstone of future blockchain, public key cryptography, and privacy protection.
+
+---
+
+## 3.5 Conclusion: What do we need to prepare for the “post-crypto era”?
+
+What blockchain developers need to think about:
+
+- Choose a chain or protocol that supports post-quantum algorithms (e.g. Ethereum has plans to do so).
+
+- Focus on new crypto technologies like zk-SNARK, Mina, FHE, etc.
+
+- Future wallet signature mechanisms may migrate to new algorithms such as Kyber/Falcon.
+
+What the average user needs to realize:
+
+- Wallet private keys need to be upgraded in the future, especially when using hardware wallets.
+
+- Static encryption keys with a lifespan of more than 10 years are not recommended.
+
+What is industry doing?
+
+- Google has upgraded Chrome's TLS encryption engine to support Post-Quantum Cipher.
+
+- Signal, Apple also exploring “quantum-secure communication protocols.”
+
+- National security agencies are beginning to stockpile “quantum-safe depository” solutions.
+
+> We are entering a new era of encryption, moving from classical cryptography to quantum cryptography, a revolution in computing power and trust. We are entering a new cryptographic era, from classical cryptography to quantum cryptography.
+
+The future of blockchain is still cryptographic, but the cryptographic algorithms will change forever. Don't ignore this change, it's not the future, it's the present.
+
+## 3.6 What algorithms will the future consensus be based on?
+
+Looking at the history of blockchain evolution, the consensus mechanism in the past decade has evolved from PoW (Proof of Workload) → PoS (Proof of Stake) → DPoS/BFT → PoH (Proof of History) from “security-first” to “performance-first”. The future consensus mechanism will not only be “security-first” but also “performance-first”. The future consensus mechanism will not only be an “algorithm” problem, but also a systematic project: it involves the comprehensive evolution of computation, communication, encryption, gaming, and incentives.
+
+### 3.6.1 Trends in Future Consensus Mechanisms: Key Features
+
+| Feature                          | Description                                                                      |
+| -------------------------------- | -------------------------------------------------------------------------------- |
+| **High Performance**             | TPS should reach tens of thousands or even millions (L2, modular scaling)        |
+| **Sybil/ Censorship Resistance** | Must prevent not only malicious actions, but also censorship and rollback audits |
+| **Low Energy Consumption**       | Reducing energy use is a key reason for PoW's decline                            |
+| **Composable / Modular**         | Consensus will no longer be hardcoded into chains, but modular and pluggable     |
+| **Quantum Resistant**            | Underlying algorithms must consider post-quantum attacks                         |
+| **Economically Sustainable**     | Incentive models should not rely on endless inflation or high gas fees           |
+
+---
+
+### 3.6.2 What algorithms might the future of consensus, be based on?
+
+Combined Consensus
+
+In the future, mainstream public chains may no longer use a single consensus algorithm, but dynamically switch or combine multiple mechanisms according to demand. For example:
+
+- PoS + ZK (Zero Knowledge Proof)
+
+- PoH + BFT (Solana model)
+
+- PoS + DAG + BFT (e.g. Avalanche subnet)
+
+Benefits: balances security, scalability and low latency, easy modular deployment.
+
+---
+
+ZK + Rollup + Recursive Proof Consensus
+
+ZK (Zero Knowledge Proof) is becoming the **core settlement logic** of ecosystems such as Ether, and may be expanded to be part of the main consensus mechanism in the future:
+
+- L2 commit state → generate proof using ZK
+
+- L1 Verify ZK proofs only (no need to re-enact all transactions)
+
+- Eventually **Proof-of-Validity** to replace traditional consensus recomputation
+
+> Polygon zkEVM, Scroll, StarkNet are all going this route.
+
+---
+
+AI + Adaptive Game Modeling for Consensus
+
+As AI Agents become more involved on the chain, consensus mechanisms may be introduced in the future:
+
+- **AI-assisted validator selection**
+
+- Dynamic adjustment of weights and penalty mechanisms
+
+- Parameter prediction and consensus selection based on game equilibrium
+
+In this model, the chain's consensus may be regulated like a “market” instead of fixed code logic.
+
+DAG (Directed Acyclic Graph) and Asynchronous Consensus
+
+Projects such as IOTA, Fantom, Aleph Zero, etc. have explored leaderless consensus mechanisms based on DAG:
+
+- No more concept of “chain”, transactions form a graph structure.
+
+- Asynchronous consensus, high throughput
+
+- Asynchronous consensus, high throughput, can be combined with BFT consensus finality guarantee
+
+> The combination of DAG+ZK+PoS may be the ideal form for asynchronous parallel computing environment.
+
+---
+
+Intent-driven consensus: user perspective consensus
+
+Projects such as Eigenlayer, Anoma, Espresso, etc. are working on “**Intent Layer Consensus**”:
+
+- Consensus shifts from “sequentiality of transactions” to “order of fulfillment of user intent”.
+
+- For example, if you intend to “exchange ETH for USDC”, the chain only needs to ensure that the final state is reached, not to execute each step sequentially.
+
+This requires: “Intent gossip network”, “matchmaker”, “sequencer”.
+
+Possibly based on BFT + MEV Auction + Rollup to accomplish this.
+
+---
+
+### 3.6.3 Underlying Algorithmic Foundations of Consensus Mechanisms
+
+| Types                               | Example Algorithms                | Features                                                                 |
+| ----------------------------------- | --------------------------------- | ------------------------------------------------------------------------ |
+| **Byzantine Fault Tolerance (BFT)** | Tendermint, HotStuff, DiemBFT     | Highly secure, suitable for federation chains, PoS chain finality layers |
+| **Anti-Quantum Consensus**          | Lattice-based signatures + PQ-BFT | post-quantum security                                                    |
+| **Probabilistic Consensus**         | Nakamoto Consensus (PoW/PoS)      | No need for explicit endpoints, but can be rolled back                   |
+| **ZK Consensus**                    | zk-STARK, zk-SNARK                | State verifiable, not dependent on execution repeatability               |
+
+### 3.6.4 Summary: Future consensus is not just an algorithm, but an ecosystem coordinator
+
+The future blockchain consensus mechanism may have the following shape:
+
+- The bottom layer is PoS or modular execution layer
+
+- The bottom layer is PoS or modularized execution layer, and the upper layer uses ZK, AI or Intent logic.
+
+- Extended security through multi-chain consensus sharing (e.g. AVS / Eigenlayer).
+
+- Quantum resistance and adaptive reward mechanisms.
+
+> The ultimate goal of consensus is not “everyone does the same thing”, but “everyone agrees on the outcome”. The future of consensus is the future of trust computing.
+
+The consensus of the future is the reconstruction of trust computing, and the underlying logic of human, machine and chain collaboration.
